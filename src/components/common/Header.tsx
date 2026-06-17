@@ -1,12 +1,34 @@
+import { Home, User, Laptop, Mail } from "lucide-react";
+
 function Header() {
   return (
-    <header className="fixed top-0 w-full bg-white border-b border-gray-200 z-50">
-      <div className="max-w-5xl mx-auto px-6 py-4 flex justify-between items-center">
-        <span className="font-semibold text-gray-900">Kwan</span>
-        <nav className="flex gap-6 text-sm text-gray-600">
-          <a href="#about">About</a>
-          <a href="#projects">Projects</a>
-          <a href="#contact">Contact</a>
+    <header
+      className="fixed top-0 w-full z-50 px-6 py-4"
+      style={{ backgroundColor: "#FDE0BC" }}
+    >
+      <div className="max-w-6xl mx-auto flex justify-between items-center">
+        <a
+          href="#home"
+          className="font-bold text-black tracking-widest text-xl"
+          style={{ fontFamily: "'Share Tech Mono'" }}
+        >
+          YOON KWAN
+        </a>
+        <nav className="flex gap-3">
+          {[
+            { icon: <Home size={20} color="black" />, href: "#home" },
+            { icon: <User size={20} color="black" />, href: "#about" },
+            { icon: <Laptop size={20} color="black" />, href: "#projects" },
+            { icon: <Mail size={20} color="black" />, href: "#contact" },
+          ].map((item, i) => (
+            <a
+              key={i}
+              href={item.href}
+              className="w-9 h-9 flex items-center justify-center"
+            >
+              <span className="text-[#FDE0BC]">{item.icon}</span>
+            </a>
+          ))}
         </nav>
       </div>
     </header>

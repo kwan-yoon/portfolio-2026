@@ -1,1 +1,22 @@
 @import "tailwindcss";
+
+html {
+  scroll-padding-top: 70px;
+}
+
+body {
+  font-family: "Share Tech Mono", monospace;
+}
+
+.cmd-font {
+  font-family: Consolas, "Courier New", monospace !important;
+}
+
+.card-title {
+  font-family: "Pretendard", sans-serif;
+  font-weight: 600;
+}
+
+.card-header {
+  background-color: #f0f0f0;
+}
