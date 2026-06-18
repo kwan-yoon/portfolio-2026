@@ -75,18 +75,38 @@ function Projects() {
         </div>
 
         {/* 하단 프로젝트 카드 목록 */}
-        <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+        <div className="md:grid md:grid-cols-3 md:gap-4 hidden md:flex">
           {projects.map((project) => (
             <div
               key={project.id}
               onClick={() => setSelected(project)}
-              className={`relative rounded-2xl bg-white p-4 cursor-pointer hover:opacity-80 transition-opacity`}
+              className="relative rounded-2xl bg-white p-4 cursor-pointer hover:opacity-80 transition-opacity"
             >
               {selected.id === project.id && (
                 <div className="absolute top-2 right-2">✔️</div>
               )}
               <p className="text-sm font-bold text-gray-900 mb-1">
-                {project.name}
+                {project.icon} {project.name}
+              </p>
+              <p className="text-xs text-gray-400 mb-2">{project.period}</p>
+              <p className="text-xs text-gray-600">{project.description}</p>
+            </div>
+          ))}
+        </div>
+
+        {/* 모바일 슬라이드 */}
+        <div className="flex md:hidden overflow-x-auto snap-x snap-mandatory gap-4 pb-2">
+          {projects.map((project) => (
+            <div
+              key={project.id}
+              onClick={() => setSelected(project)}
+              className="snap-center shrink-0 w-full rounded-2xl bg-white p-4 cursor-pointer"
+            >
+              {selected.id === project.id && (
+                <div className="absolute top-2 right-2">✔️</div>
+              )}
+              <p className="text-sm font-bold text-gray-900 mb-1">
+                {project.icon} {project.name}
               </p>
               <p className="text-xs text-gray-400 mb-2">{project.period}</p>
               <p className="text-xs text-gray-600">{project.description}</p>
