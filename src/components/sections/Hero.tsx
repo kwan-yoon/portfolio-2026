@@ -22,7 +22,7 @@ function Hero() {
   }, [index]);
 
   return (
-    <Section id="hero">
+    <Section id="home">
       <div className="max-w-6xl mx-auto w-full flex flex-col md:flex-row gap-6">
         {/* 좌측 CMD */}
         <div className="md:w-1/3 w-full">

@@ -56,50 +56,54 @@ function About() {
               💼 직무 경험
             </span>
           </div>
-          <div className="bg-white flex-1 p-6 flex items-center justify-center">
-            {!flipped ? (
-              <div
-                className="flex flex-col items-center gap-2 cursor-pointer hover:opacity-80"
-                onClick={() => setFlipped(true)}
-              >
-                <div className="relative w-24 h-20">
-                  <div
-                    className="absolute top-3 left-0 w-full h-16 rounded-b-lg rounded-tr-lg"
-                    style={{ backgroundColor: "#F5C518" }}
-                  />
-                  <div
-                    className="absolute top-0 left-0 w-10 h-4 rounded-t-lg"
-                    style={{ backgroundColor: "#F5C518" }}
-                  />
-                </div>
-                <span className="text-xs text-gray-700 font-medium">
+          <div className="bg-white flex-1 p-6 flex items-center justify-center relative overflow-hidden">
+            <div
+              className={`w-full transition-all duration-300 ease-in-out ${
+                flipped
+                  ? "opacity-100 translate-y-0"
+                  : "opacity-0 translate-y-4 pointer-events-none absolute"
+              }`}
+            >
+              <div className="flex justify-between items-center mb-4">
+                <h3 className="font-semibold text-gray-900">
                   {experience.company}
-                </span>
-                <span className="text-xs text-gray-400">
-                  {experience.period}
-                </span>
+                </h3>
+                <button
+                  onClick={() => setFlipped(false)}
+                  className="text-red-400 hover:text-red-600 text-base"
+                >
+                  ✕
+                </button>
               </div>
-            ) : (
-              <div className="w-full">
-                <div className="flex justify-between items-center mb-4">
-                  <h3 className="font-semibold text-gray-900">
-                    {experience.company}
-                  </h3>
-                  <button
-                    onClick={() => setFlipped(false)}
-                    className="text-xs text-gray-400 hover:text-gray-600"
-                  >
-                    ✕ 닫기
-                  </button>
-                </div>
-                <p className="text-xs text-gray-500 mb-2">
-                  {experience.period}
-                </p>
-                <p className="text-sm text-gray-700 leading-relaxed">
-                  {experience.description}
-                </p>
+              <p className="text-xs text-gray-500 mb-2">{experience.period}</p>
+              <p className="text-sm text-gray-700 leading-relaxed">
+                {experience.description}
+              </p>
+            </div>
+
+            <div
+              className={`flex flex-col items-center gap-2 cursor-pointer hover:opacity-80 transition-all duration-300 ease-in-out ${
+                flipped
+                  ? "opacity-0 translate-y-4 pointer-events-none absolute"
+                  : "opacity-100 translate-y-0"
+              }`}
+              onClick={() => setFlipped(true)}
+            >
+              <div className="relative w-24 h-20">
+                <div
+                  className="absolute top-3 left-0 w-full h-16 rounded-b-lg rounded-tr-lg"
+                  style={{ backgroundColor: "#F5C518" }}
+                />
+                <div
+                  className="absolute top-0 left-0 w-10 h-4 rounded-t-lg"
+                  style={{ backgroundColor: "#F5C518" }}
+                />
               </div>
-            )}
+              <span className="text-xs text-gray-700 font-medium">
+                {experience.company}
+              </span>
+              <span className="text-xs text-gray-400">{experience.period}</span>
+            </div>
           </div>
         </div>
       </div>

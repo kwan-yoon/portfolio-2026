@@ -77,12 +77,12 @@ function Projects() {
             <div
               key={project.id}
               onClick={() => setSelected(project)}
-              className="relative rounded-2xl bg-white p-4 cursor-pointer hover:opacity-80 transition-opacity"
+              className="group relative rounded-2xl bg-white p-4 cursor-pointer transition-all"
             >
               {selected.id === project.id && (
                 <div className="absolute top-2 right-2">✔️</div>
               )}
-              <p className="text-sm font-bold text-gray-900 mb-1">
+              <p className="text-sm font-bold text-gray-900 group-hover:text-red-400 transition-colors mb-1">
                 {project.icon} {project.name}
               </p>
               <p className="text-xs text-gray-400 mb-2">{project.period}</p>
@@ -97,12 +97,12 @@ function Projects() {
             <div
               key={project.id}
               onClick={() => setSelected(project)}
-              className="snap-center shrink-0 w-full rounded-2xl bg-white p-4 cursor-pointer"
+              className="group snap-center shrink-0 w-full rounded-2xl bg-white p-4 cursor-pointer"
             >
               {selected.id === project.id && (
                 <div className="absolute top-2 right-2">✔️</div>
               )}
-              <p className="text-sm font-bold text-gray-900 mb-1">
+              <p className="text-sm font-bold text-gray-900 group-hover:text-red-400 transition-colors mb-1">
                 {project.icon} {project.name}
               </p>
               <p className="text-xs text-gray-400 mb-2">{project.period}</p>

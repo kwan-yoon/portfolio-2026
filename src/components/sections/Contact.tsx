@@ -32,10 +32,12 @@ function Contact() {
               href={contact.href}
               target="_blank"
               rel="noopener noreferrer"
-              className="rounded-2xl bg-white p-8 flex flex-col items-center gap-3 hover:opacity-80 transition-opacity cursor-pointer"
+              className="group rounded-2xl bg-white p-8 flex flex-col items-center gap-3 hover:shadow-lg transition-all cursor-pointer"
             >
               <span className="text-4xl">{contact.icon}</span>
-              <p className="font-bold text-gray-900">{contact.name}</p>
+              <p className="font-bold text-gray-900 group-hover:text-red-400 transition-colors">
+                {contact.name}
+              </p>
               <p className="text-xs text-gray-400">{contact.value}</p>
             </a>
           ))}
