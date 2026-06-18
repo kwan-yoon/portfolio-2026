@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import Section from "../common/Section";
 
 const CMD_HTML = `
 <p class="mb-7">C:\\Users\\Kwan &gt; Who am I?</p>
@@ -21,11 +22,7 @@ function Hero() {
   }, [index]);
 
   return (
-    <section
-      id="home"
-      className="flex items-center px-6 pt-4"
-      style={{ backgroundColor: "#FDE0BC" }}
-    >
+    <Section id="hero">
       <div className="max-w-6xl mx-auto w-full flex flex-col md:flex-row gap-6">
         {/* 좌측 CMD */}
         <div className="md:w-1/3 w-full">
@@ -93,7 +90,7 @@ function Hero() {
           </div>
         </div>
       </div>
-    </section>
+    </Section>
   );
 }
 

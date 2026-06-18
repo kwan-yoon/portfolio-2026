@@ -3,7 +3,7 @@ import { Home, User, Laptop, Mail } from "lucide-react";
 function Header() {
   return (
     <header
-      className="fixed top-0 w-full z-50 px-6 py-4"
+      className=" top-0 w-full z-50 px-6 py-4"
       style={{ backgroundColor: "#FDE0BC" }}
     >
       <div className="max-w-6xl mx-auto flex justify-between items-center">

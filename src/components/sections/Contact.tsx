@@ -1,3 +1,5 @@
+import Section from "../common/Section";
+
 const contacts = [
   {
     icon: "✉️",
@@ -21,11 +23,7 @@ const contacts = [
 
 function Contact() {
   return (
-    <section
-      id="contact"
-      className="pb-4 px-6"
-      style={{ backgroundColor: "#FDE0BC" }}
-    >
+    <Section id="contact">
       <div className="max-w-6xl mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {contacts.map((contact, i) => (
@@ -43,7 +41,7 @@ function Contact() {
           ))}
         </div>
       </div>
-    </section>
+    </Section>
   );
 }
 

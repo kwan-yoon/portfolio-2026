@@ -1,4 +1,5 @@
 import { useState } from "react";
+import Section from "../common/Section";
 
 const skills = [
   {
@@ -20,11 +21,7 @@ function About() {
   const [flipped, setFlipped] = useState(false);
 
   return (
-    <section
-      id="about"
-      className="py-10 flex items-center px-6"
-      style={{ backgroundColor: "#FDE0BC" }}
-    >
+    <Section id="about">
       <div className="max-w-6xl mx-auto w-full grid grid-cols-1 md:grid-cols-2 gap-6">
         <div className="rounded-2xl overflow-hidden flex flex-col">
           <div className="card-header px-4 py-2 flex items-center gap-2">
@@ -106,7 +103,7 @@ function About() {
           </div>
         </div>
       </div>
-    </section>
+    </Section>
   );
 }
 

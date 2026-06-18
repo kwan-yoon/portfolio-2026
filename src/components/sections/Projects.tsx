@@ -1,4 +1,5 @@
 import { useState } from "react";
+import Section from "../common/Section";
 
 const projects = [
   {
@@ -34,11 +35,7 @@ function Projects() {
   const [selected, setSelected] = useState(projects[0]);
 
   return (
-    <section
-      id="projects"
-      className="pb-10 px-6"
-      style={{ backgroundColor: "#FDE0BC" }}
-    >
+    <Section id="projects">
       <div className="max-w-6xl mx-auto flex flex-col gap-6">
         {/* 상단 상세 영역 */}
         <div className="rounded-2xl overflow-hidden">
@@ -114,7 +111,7 @@ function Projects() {
           ))}
         </div>
       </div>
-    </section>
+    </Section>
   );
 }
 

@@ -1,7 +1,7 @@
 function Footer() {
   return (
     <footer
-      className="w-full border-t border-gray-200 py-3"
+      className="snap-start w-full border-t border-gray-200 py-3"
       style={{ backgroundColor: "#FDE0BC" }}
     >
       <div className="max-w-5xl mx-auto px-6 text-center text-sm text-black">
