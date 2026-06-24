@@ -19,7 +19,6 @@ function Header() {
             { icon: <Home size={20} color="black" />, href: "#home" },
             { icon: <User size={20} color="black" />, href: "#about" },
             { icon: <Laptop size={20} color="black" />, href: "#projects" },
-            { icon: <Mail size={20} color="black" />, href: "#contact" },
           ].map((item, i) => (
             <a
               key={i}
